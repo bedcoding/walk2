@@ -3,12 +3,14 @@
 
 <!-- 목록 버튼을 눌렀을때 나오는 fragment 디자인 -->
 
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.example.ggavi.registeration.CourseFragment">
+    tools:context="com.example.ggavi.registeration.CourseFragment"
+    android:background="@color/colorBackground">
 
 
     <RadioGroup
