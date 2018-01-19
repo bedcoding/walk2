@@ -104,6 +104,16 @@ public class LoginActivity extends AppCompatActivity {
                 queue.add(loginRequest);
             }
         });
+
+        // (26) 제작자 정보 보기 버튼
+        TextView information = (TextView) findViewById(R.id.information);
+        information.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(LoginActivity.this, Pop.class));
+            }
+        });
     }
 
     @Override
