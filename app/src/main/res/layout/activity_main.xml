@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.ggavi.registeration.MainActivity">
+  
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:orientation="horizontal"
+      android:layout_marginTop="5dp"
+      android:layout_marginRight="5dp">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/courseButton"
+        android:text="목록"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/scheduleButton"
+        android:text="시간표"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:id="@+id/statisticsButton"
+        android:text="분석"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp"
+        android:background="@color/colorPrimary"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"/>
+  </LinearLayout>
+
+  <!-- FrameLayout 부분은 화면이 전환될 수 있는 부분
+  즉, 다른 버튼을 눌렀을 때 바뀌는 부분 중 하나
+  기본적으로는 LinearLayout 안에 들어가 있다가,
+  나중에 RelativeLayout 이걸로 바뀜 -->
+
+  <FrameLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent">
+
+    <!--초반에 공지사항을 보여주는 부분-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:id="@+id/notice">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:orientation="vertical"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="8dp">
+
+            <ImageButton
+                android:layout_width="165dp"
+                android:layout_height="125dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:src="@drawable/logo2"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="공지사항"
+                android:textColor="#ffffff"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+        </LinearLayout>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/noticeListView"
+            android:layout_margin="10dp"
+            android:dividerHeight="10dp"
+            android:divider="#ffffff">
+        </ListView>
+
+    </LinearLayout>
+
+    <!--통계, 시간표, 목록 중 하나를 선택했을 때 이걸로 화면이 바뀜-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/fragment">
+    </RelativeLayout>
+  </FrameLayout>
+  
+</LinearLayout>

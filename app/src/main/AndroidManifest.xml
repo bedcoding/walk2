@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ggavi.registeration">
+
+    <!-- 인터넷 접속을 위한 인터넷 연결 허용 설정 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar"> <!-- 수정한 부분 -->
+
+        <!-- 24번: 어플 켤때 나오는 스플래시 이미지 넣기 -->
+        <activity android:name=".Splashscreen"
+            android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- LAUNCHER: 처음 어플을 실행시킬 때 가장 먼저 작동되는 코드 -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+
+        <!-- 처음에 틀 때 실행되는 액티비티 -->
+        <activity android:name=".LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <!-- (24) 위에서 LAUNCHER로 바꾸었으므로 이부분은 DEFAULT로 변경 -->
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".MainActivity"></activity>
+    </application>
+
+</manifest>

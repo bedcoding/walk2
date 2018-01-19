@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="major"> <!--major 말고 다른 이름도 됨-->
+        <item>선택1</item>
+        <item>선택2</item>
+        <item>선택3</item>
+        <item>선택4</item>
+        <item>선택5</item>
+    </string-array>
+
+    <string-array name="year">
+        <item>2018년</item>
+        <item>2019년</item>
+        <item>2020년</item>
+        <item>2021년</item>
+        <item>2022년</item>
+    </string-array>
+
+    <string-array name="term">
+        <item>1학</item>
+        <item>2학</item>
+        <item>3학</item>
+        <item>4학</item>
+    </string-array>
+
+
+    <!--구별 : 예를들면 학부인지 대학원인지 구분하는 식-->
+    <string-array name="graduateArea">
+        <item>일반대학원</item>
+    </string-array>
+
+    <string-array name="universityArea">
+        <item>교양및기타</item>
+        <item>전공</item>
+    </string-array>
+
+
+
+
+    <!--선택해야 하는 목록-->
+
+    <!--대학원에 들어가는 모든 학과 정보-->
+    <string-array name="graduateMajor">
+        <item>1</item> <!--대학원 학과1-->
+        <item>2</item> <!--대학원 학과2-->
+    </string-array>
+
+    <string-array name="universityRefinementMajor">
+        <item>1</item> <!--교양1-->
+        <item>2</item> <!--교양2-->
+    </string-array>
+
+    <string-array name="universityMajor">
+        <item>1</item> <!--학과 전공1-->
+        <item>2</item> <!--학과 전공2-->
+    </string-array>
+
+    <!-- 인기 순위를 출력하는 스피너의 원소 -->
+    <string-array name="rank">
+        <item>전체에서</item>
+        <item>남자 선호도</item>
+        <item>여자 선호도</item>
+    </string-array>
+
+</resources>
