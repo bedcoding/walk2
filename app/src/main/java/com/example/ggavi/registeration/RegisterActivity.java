@@ -20,7 +20,7 @@ import org.w3c.dom.Text;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    // values 폴더에 추가한 arrays.xml 이놈을 담기 위해 선언
+    // (4)values 폴더에 추가한 arrays.xml 이놈을 담기 위해 선언
     private ArrayAdapter adapter;
     private Spinner spinner;
     private String userID;
@@ -39,9 +39,9 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        // spinner 얘는 현재 디자인에 있는 majorSpinner 이놈을 그대로 가져올 수 있도록 하고
-        // adapter 얘는 values 폴더에 추가한 arrays.xml 얘들을 얻어와서 넣어줌
-        // 마지막으로 스피너에 위에서 얻어온 adapter 이거를 추가해주면 정상적으로 등록이 됨
+        // (2) spinner 얘는 현재 디자인에 있는 majorSpinner 이놈을 그대로 가져올 수 있도록 하고
+        // adapter 얘는 values 폴더에 추가한 arrays.xml 얘들을 얻어와서 넣어준다.
+        // 마지막으로 스피너에 위에서 얻어온 adapter를 추가하면 정상 등록된다.
         spinner = (Spinner) findViewById(R.id.majorSpinner);
         adapter = ArrayAdapter.createFromResource(this, R.array.major, android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
@@ -66,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
         });
 
 
-        // 회원 중복 체크 버튼
+        // (4)회원 중복 체크 버튼
         final Button validateButton = (Button) findViewById(R.id.validateButton);
         validateButton.setOnClickListener(new View.OnClickListener() {
 

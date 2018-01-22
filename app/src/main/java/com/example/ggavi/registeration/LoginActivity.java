@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
 
-        // 로그인 창에서 회원가입 버튼을 눌렀을 때 화면이 넘어가는 부분
+        // (2)로그인 창에서 회원가입 버튼을 눌렀을 때 화면이 넘어가는 부분
         TextView registerButton = (TextView) findViewById(R.id.registerButton);
         registerButton.setOnClickListener(new View.OnClickListener() {
 
@@ -38,13 +38,13 @@ public class LoginActivity extends AppCompatActivity {
         });
 
 
-        // 아이디 텍스트를 매칭시켜준다 (아이디를 입력받는 부분)
+        // (5)아이디 텍스트를 매칭시켜준다 (아이디를 입력받는 부분)
         final EditText idText = (EditText) findViewById(R.id.idText);
         final EditText passwordText = (EditText) findViewById(R.id.passwordText);
         final Button loginButton = (Button) findViewById(R.id.loginButton);
 
 
-        // 로그인 버튼을 눌렀을 때 발생하는 이벤트 처리
+        // (5)로그인 버튼을 눌렀을 때 발생하는 이벤트 처리
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -73,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
                                 // 화면 전환 (로그인창 -> 메인창)
                                 Intent intent = new Intent(LoginActivity.this, MainActivity.class);
 
-                                // 12강에서 추가 (userID에 대한 정보를 보내줌)
+                                // (12)userID에 대한 정보를 보내줌
                                 intent.putExtra("userID", userID);
 
                                 LoginActivity.this.startActivity(intent);
@@ -105,7 +105,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        // (26) 제작자 정보 보기 버튼
+        // (26)제작자 정보 보기 버튼
         TextView information = (TextView) findViewById(R.id.information);
         information.setOnClickListener(new View.OnClickListener() {
 
@@ -120,7 +120,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onStop() {
         super.onStop();
 
-        // 현재 dialog 이놈이 켜져 있을 때는 함부로 종료되지 않게 한다 (큰 의미는 없음)
+        // (5)현재 dialog 이놈이 켜져 있을 때는 함부로 종료되지 않게 한다 (큰 의미는 없음)
         if (dialog != null)
         {
             dialog.dismiss();

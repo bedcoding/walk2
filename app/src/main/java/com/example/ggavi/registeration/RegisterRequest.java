@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 
-// 카페24와 서버 연동 : 회원가입
+// (4)카페24와 서버 연동 : 회원가입
 public class RegisterRequest extends StringRequest {
 
     final static private String URL = "http://ggavi2000.cafe24.com/UserRegister.php";
