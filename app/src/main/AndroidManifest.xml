@@ -5,18 +5,19 @@
     <!-- 인터넷 접속을 위한 인터넷 연결 허용 설정 -->
     <uses-permission android:name="android.permission.INTERNET" />
 
-    <!-- (28)어플 로고 아이콘, 제목 변경 -->
+    <!-- (28)어플 로고 아이콘, 제목 변경 / label을 수정해서 상단바 글자 설정 -->
     <application
         android:allowBackup="true"
-        android:icon="@drawable/main_logo"
-        android:label="비트고오급 테스트"
+        android:icon="@drawable/logo"
+        android:label=""
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme.NoActionBar"> <!-- 수정한 부분 -->
+        android:theme="@style/AppTheme">
+        <!-- (1) 액션바 없애기 android:theme="@style/AppTheme.NoActionBar" -->
 
-        <!-- (24)어플 켤때 나오는 스플래시 이미지 넣기 -->
+        <!-- (24)어플 켤때 나오는 스플래시 이미지 넣기 / label 수정해서 어플 이름 변경 -->
         <activity android:name=".Splashscreen"
-            android:label="비트고오급 테스트">
+            android:label="Walk Away">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

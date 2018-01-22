@@ -8,11 +8,13 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <!--추가한 부분-->
+    <!-- (1) 액션바 없앨때 쓰는 부분-->
+    <!--
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+    -->
 
     <!-- (26) 추가 -->
     <style name="AppTheme.Pop">

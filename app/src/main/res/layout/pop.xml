@@ -29,7 +29,7 @@
     <TextView
         android:drawableStart="@drawable/ic_local_cafe_black_24dp"
         android:drawableLeft="@drawable/ic_local_cafe_black_24dp"
-        android:text=" 버전 : 0.1"
+        android:text=" 버전 : 0.0"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="20dp"
@@ -82,6 +82,7 @@
         android:layout_marginBottom="15dp"
         android:orientation="vertical">
 
+        <!--
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,6 +92,7 @@
             android:textSize="15dp"
             android:textStyle="bold"
             android:layout_gravity="center"/>
+        -->
 
         <ScrollView
             android:layout_width="match_parent"
@@ -113,7 +115,7 @@
 
                     <!-- 사진 동그랗게 만드는 깃허브 소스를 불러옴 -->
                     <com.example.ggavi.registeration.CircleImageView
-                        android:src="@drawable/admin1"
+                        android:src="@drawable/splash_img"
                         android:id="@+id/imageView"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -129,7 +131,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="동남아창의융합학부 13학번"
+                            android:text="동남아창의융합학부"
                             android:textColor="#000000"
                             android:textSize="15dp" />
 
@@ -154,7 +156,7 @@
                     android:orientation="horizontal">
 
                     <com.example.ggavi.registeration.CircleImageView
-                        android:src="@drawable/admin1"
+                        android:src="@drawable/splash_img"
                         android:id="@+id/imageView2"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
@@ -170,7 +172,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="동남아창의융합학부 15학번"
+                            android:text="동남아창의융합학부"
                             android:textColor="#000000"
                             android:textSize="15dp" />
 
@@ -194,7 +196,7 @@
                     android:orientation="horizontal">
 
                     <com.example.ggavi.registeration.CircleImageView
-                        android:src="@drawable/admin1"
+                        android:src="@drawable/splash_img"
                         android:id="@+id/imageView3"
                         android:layout_width="80dp"
                         android:layout_height="80dp"
