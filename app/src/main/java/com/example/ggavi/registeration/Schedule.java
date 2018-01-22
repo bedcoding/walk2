@@ -2,6 +2,7 @@ package com.example.ggavi.registeration;
 
 import android.content.Context;
 import android.content.Intent;
+import android.support.v4.content.ContextCompat;
 import android.widget.TextView;
 
 public class Schedule {
@@ -660,8 +661,12 @@ public class Schedule {
                 // 이런 식으로 하면 해당 배열에 있는 내용이 저 monday라는 텍스트 뷰에 값이 들어가게 된다.
                 monday[i].setText(this.monday[i]);
 
-                // 해당 강의가 존재할 때 글자색상이 바뀜
-                monday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                // DB에서 값을 불러왔는지 if문으로 체크 (급히 화면 전환하면 터져길래 넣음)
+                if (context != null)
+                {
+                    // 해당 강의가 존재할 때 글자색상이 바뀜
+                    monday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                }
             }
 
             // (16) else문 추가
@@ -681,8 +686,13 @@ public class Schedule {
                 // 이런 식으로 하면 해당 배열에 있는 내용이 저 ~day라는 텍스트 뷰에 값이 들어가게 된다.
                 tuesday[i].setText(this.tuesday[i]);
 
-                // 해당 강의가 존재할 때 색상이 바뀜
-                tuesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                // DB에서 값을 불러왔는지 if문으로 체크 (급히 화면 전환하면 터져길래 넣음)
+                if (context != null)
+                {
+                    // 해당 강의가 존재할 때 글자색상이 바뀜
+                    tuesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                }
+
             }
 
             else
@@ -701,8 +711,12 @@ public class Schedule {
                 // 이런 식으로 하면 해당 배열에 있는 내용이 저 ~day라는 텍스트 뷰에 값이 들어가게 된다.
                 wednesday[i].setText(this.wednesday[i]);
 
-                // 해당 강의가 존재할 때 색상이 바뀜
-                wednesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                // DB에서 값을 불러왔는지 if문으로 체크 (급히 화면 전환하면 터져길래 넣음)
+                if (context != null)
+                {
+                    // 해당 강의가 존재할 때 글자색상이 바뀜
+                    wednesday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                }
             }
 
             else
@@ -721,8 +735,12 @@ public class Schedule {
                 // 이런 식으로 하면 해당 배열에 있는 내용이 저 ~day라는 텍스트 뷰에 값이 들어가게 된다.
                 thursday[i].setText(this.thursday[i]);
 
-                // 해당 강의가 존재할 때 색상이 바뀜
-                thursday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                // DB에서 값을 불러왔는지 if문으로 체크 (급히 화면 전환하면 터져길래 넣음)
+                if (context != null)
+                {
+                    // 해당 강의가 존재할 때 글자색상이 바뀜
+                    thursday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                }
             }
 
             else
@@ -741,8 +759,12 @@ public class Schedule {
                 // 이런 식으로 하면 해당 배열에 있는 내용이 저 ~day라는 텍스트 뷰에 값이 들어가게 된다.
                 friday[i].setText(this.friday[i]);
 
-                // 해당 강의가 존재할 때 색상이 바뀜
-                friday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                // DB에서 값을 불러왔는지 if문으로 체크 (급히 화면 전환하면 터져길래 넣음)
+                if (context != null)
+                {
+                    // 해당 강의가 존재할 때 글자색상이 바뀜
+                    friday[i].setTextColor(context.getResources().getColor(R.color.colorPrimaryDark));
+                }
             }
 
             else
