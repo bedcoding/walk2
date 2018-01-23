@@ -50,15 +50,15 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:id="@+id/yearSpinner"> <!--연도가 들어가는 스피너-->
+            android:id="@+id/yearSpinner">
         </Spinner>
 
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:id="@+id/termSpinner"> <!--학기가 들어가는 스피너-->
+            android:id="@+id/termSpinner">
         </Spinner>
 
         <Spinner
@@ -81,7 +81,7 @@
         android:paddingRight="10dp">
 
         <Spinner
-            android:layout_width="230dp"
+            android:layout_width="210dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
