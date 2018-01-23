@@ -244,7 +244,7 @@ public class CourseFragment extends Fragment {
                 // 나머지도 그런 식으로 보내준다. (현재 영역을 UTF-8로 치환해서 보내줌) (현재 학과 정보를 받아와서 majorSpinner로 받아와서 UTF-8으로 보내줌)
 
                 target = "http://ggavi2000.cafe24.com/CourseList.php?courseUniversity=" + URLEncoder.encode(courseUniversity, "UTF-8") +
-                        "&courseYear=" + URLEncoder.encode(yearSpinner.getSelectedItem().toString().substring(0, 4), "UTF-8") +
+                        "&courseYear=" + URLEncoder.encode(yearSpinner.getSelectedItem().toString(), "UTF-8") +
                         "&courseTerm=" + URLEncoder.encode(termSpinner.getSelectedItem().toString(), "UTF-8") +
                         "&courseArea=" + URLEncoder.encode(areaSpinner.getSelectedItem().toString(), "UTF-8") +
                         "&courseMajor=" + URLEncoder.encode(majorSpinner.getSelectedItem().toString(), "UTF-8");
@@ -317,7 +317,7 @@ public class CourseFragment extends Fragment {
                 // 이후 Course.java 안에 있는 변수를 그대로 넣어준다.
                 int courseID;               // 고유 번호
                 String courseUniversity;    // 학부 혹은 대학원
-                int courseYear;             // 해당 년도
+                String courseYear;             // 해당 년도
                 String courseTerm;          // 해당 학기
                 String courseArea;          // 강의 영역
                 String courseMajor;         // 해당 학과
@@ -341,7 +341,7 @@ public class CourseFragment extends Fragment {
                     // 매 강의 정보마다 이렇게 각각의 원소에 각각의 강의 정보가 들어간다.
                     courseID = object.getInt("courseID");
                     courseUniversity = object.getString("courseUniversity");
-                    courseYear = object.getInt("courseYear");
+                    courseYear = object.getString("courseYear");
                     courseTerm = object.getString("courseTerm");
                     courseArea = object.getString("courseArea");
                     courseMajor = object.getString("courseMajor");

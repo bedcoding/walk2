@@ -4,7 +4,7 @@ public class Course {
 
     int courseID;               // 고유 번호
     String courseUniversity;    // 학부 혹은 대학원
-    int courseYear;             // 해당 년도
+    String courseYear;             // 해당 년도
     String courseTerm;          // 해당 학기
     String courseArea;          // 강의 영역
     String courseMajor;         // 해당 학과
@@ -75,11 +75,11 @@ public class Course {
         this.courseUniversity = courseUniversity;
     }
 
-    public int getCourseYear() {
+    public String getCourseYear() {
         return courseYear;
     }
 
-    public void setCourseYear(int courseYear) {
+    public void setCourseYear(String courseYear) {
         this.courseYear = courseYear;
     }
 
@@ -173,7 +173,7 @@ public class Course {
 
 
     // Generate로 자동으로 생성자 만듬 (Alt + Insert)
-    public Course(int courseID, String courseUniversity, int courseYear, String courseTerm, String courseArea, String courseMajor, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseProfessor, String courseTime, String courseRoom) {
+    public Course(int courseID, String courseUniversity, String courseYear, String courseTerm, String courseArea, String courseMajor, String courseGrade, String courseTitle, int courseCredit, int courseDivide, int coursePersonnel, String courseProfessor, String courseTime, String courseRoom) {
         this.courseID = courseID;
         this.courseUniversity = courseUniversity;
         this.courseYear = courseYear;

@@ -238,7 +238,7 @@ public class ScheduleFragment extends Fragment {
                     // 현재 배열의 원소값을 저장
                     JSONObject object = jsonArray.getJSONObject(count);
 
-                    // 공지사항의 Content, Name, Date에 해당하는 값을 가져와라는 뜻
+                    // Course DB의 값을 가져오라는 뜻
                     courseID = object.getInt("courseID");
                     courseProfessor = object.getString("courseProfessor");
                     courseTime = object.getString("courseTime");
