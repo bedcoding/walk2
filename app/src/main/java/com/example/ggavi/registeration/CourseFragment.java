@@ -68,7 +68,7 @@ public class CourseFragment extends Fragment {
     }
 
 
-    // values 폴더의 arrays.xml과 연동하여 화면에 뿌려주는 부분 시작점
+    // (9)values 폴더의 arrays.xml과 연동하여 화면에 뿌려주는 부분 시작점
     private ArrayAdapter yearAdapter;
     private Spinner yearSpinner;
     private ArrayAdapter termAdapter;
@@ -91,7 +91,7 @@ public class CourseFragment extends Fragment {
     public void onActivityCreated(Bundle b) {
         super.onActivityCreated(b);
 
-        // 선택: 예를들면 현재 선택한 것이 학부인지 대학원인지 선택하는 식
+        // (9)선택: 예를들면 현재 선택한 것이 A인지 B인지 선택하는 식
         final RadioGroup courseUniversityGroup = (RadioGroup) getView().findViewById(R.id.courseUniversityGroup);
         yearSpinner = (Spinner) getView().findViewById(R.id.yearSpinner);
         termSpinner = (Spinner) getView().findViewById(R.id.termSpinner);
@@ -117,7 +117,7 @@ public class CourseFragment extends Fragment {
 
                 // 무엇을 선택했냐에 따라 다르게 나오도록 한다
                 // 예: 대학을 선택하면 학부 과정이, 대학원을 선택하면 대학원 과정이 나오는 식
-                if(courseUniversity.equals("학부")) {
+                if(courseUniversity.equals("걷는길")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.universityArea, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);  //areaAdapter를 자신의 어댑터로 설정
 
@@ -126,7 +126,7 @@ public class CourseFragment extends Fragment {
                     majorSpinner.setAdapter(majorAdapter);
                 }
 
-                else if(courseUniversity.equals("대학원")) {
+                else if(courseUniversity.equals("자전거길")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.graduateArea, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);  //areaAdapter를 자신의 어댑터로 설정
 
@@ -244,8 +244,10 @@ public class CourseFragment extends Fragment {
                 // 나머지도 그런 식으로 보내준다. (현재 영역을 UTF-8로 치환해서 보내줌) (현재 학과 정보를 받아와서 majorSpinner로 받아와서 UTF-8으로 보내줌)
 
                 target = "http://ggavi2000.cafe24.com/CourseList.php?courseUniversity=" + URLEncoder.encode(courseUniversity, "UTF-8") +
-                        "&courseYear=" + URLEncoder.encode(yearSpinner.getSelectedItem().toString().substring(0, 4), "UTF-8") + "&courseTerm=" + URLEncoder.encode(termSpinner.getSelectedItem().toString(), "UTF-8") +
-                        "&courseArea=" + URLEncoder.encode(areaSpinner.getSelectedItem().toString(), "UTF-8") + "&courseMajor=" + URLEncoder.encode(majorSpinner.getSelectedItem().toString(), "UTF-8");
+                        "&courseYear=" + URLEncoder.encode(yearSpinner.getSelectedItem().toString().substring(0, 4), "UTF-8") +
+                        "&courseTerm=" + URLEncoder.encode(termSpinner.getSelectedItem().toString(), "UTF-8") +
+                        "&courseArea=" + URLEncoder.encode(areaSpinner.getSelectedItem().toString(), "UTF-8") +
+                        "&courseMajor=" + URLEncoder.encode(majorSpinner.getSelectedItem().toString(), "UTF-8");
             }
 
             catch (Exception e)
