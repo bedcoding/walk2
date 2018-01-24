@@ -197,7 +197,7 @@ public class CourseFragment extends Fragment {
 
 
 
-        // 두번째 버튼: 만약 위에서 '서울특별시'를 선택했을 경우
+        // 두번째 버튼: 만약 위에서 '서울특별시'를 선택했을 경우!
         termSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
