@@ -659,7 +659,7 @@ public class StatisticsFragment extends Fragment {
 
                 // 어댑터를 새롭게 갱신
                 adapter.notifyDataSetChanged();
-                credit.setText(totalCredit + "학점");     // 전체 학점 출력
+                credit.setText(totalCredit + "개");     // 전체 학점 출력
 
             } catch (Exception e) {
                 e.printStackTrace();

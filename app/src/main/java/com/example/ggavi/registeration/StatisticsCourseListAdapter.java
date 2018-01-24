@@ -73,14 +73,18 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
 
 
         // statistics.xml이라는 레이아웃에 있는 모든 원소가 하나의 변수로써 자리잡게 되었다.
-        TextView courseGrade = (TextView) v.findViewById(R.id.courseGrade);
+        //TextView courseGrade = (TextView) v.findViewById(R.id.courseGrade);
         TextView courseTitle = (TextView) v.findViewById(R.id.courseTitle);
-        TextView courseDivide = (TextView) v.findViewById(R.id.courseDivide);
+        //TextView courseDivide = (TextView) v.findViewById(R.id.courseDivide);
         TextView coursePersonnel = (TextView) v.findViewById(R.id.coursePersonnel);
-        TextView courseRate = (TextView) v.findViewById(R.id.courseRate);
+        //TextView courseRate = (TextView) v.findViewById(R.id.courseRate);
 
 
+        courseTitle.setText(courseList.get(i).getCourseTitle());
+        coursePersonnel.setText("함께 좋아하는 사람수: " + courseList.get(i).getCourseRival());
 
+
+/*
 
         // courseList에서 특정한 원소를 가져올때
         // 그 원소가 "제한 없음"이라는 값을 가지거나
@@ -95,7 +99,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
             courseGrade.setText(courseList.get(i).getCourseGrade() + "학년");
         }
 
-        courseTitle.setText(courseList.get(i).getCourseTitle());
+
         courseDivide.setText(courseList.get(i).getCourseDivide() + "분반");
 
 
@@ -146,6 +150,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
             }
         }
 
+*/
         v.setTag(courseList.get(i).getCourseID());
 
 
@@ -175,7 +180,7 @@ public class StatisticsCourseListAdapter extends BaseAdapter {
 
                                 // 삭제한 만큼 학점도 빼준다.
                                 StatisticsFragment.totalCredit -= courseList.get(i).getCourseCredit();
-                                StatisticsFragment.credit.setText(StatisticsFragment.totalCredit + "학점");
+                                StatisticsFragment.credit.setText(StatisticsFragment.totalCredit + "개");
                                 courseList.remove(i);    // 리스트에서 삭제
                                 notifyDataSetChanged();  // 바뀐걸 적용
                             }

@@ -20,33 +20,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="당신이 등록한 "
+            android:text="당신이 좋아하는 코스: "
             android:textColor="#000000" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="총 코스"
-            android:textColor="@color/colorWarning" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="는 "
-            android:textColor="#000000" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0점 "
+            android:text="0개"
             android:textColor="@color/colorPrimaryDark"
             android:id="@+id/totalCredit"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="입니다."
-            android:textColor="#000000" />
     </LinearLayout>
 
 

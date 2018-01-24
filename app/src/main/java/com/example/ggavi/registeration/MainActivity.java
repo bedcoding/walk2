@@ -148,11 +148,19 @@ public class MainActivity extends AppCompatActivity {
     // 공지사항 데이터베이스에 접속할 수 있도록 만든 함수
     class BackgroundTask extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 3/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(MainActivity.this);
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
-        protected void onPreExecute() {
+        protected void onPreExecute()
+        {
             target = "http://ggavi2000.cafe24.com/NoticeList.php";  //해당 웹 서버에 접속
+
+            // (로딩창 띄우기 작업 3/2)
+            dialog.setMessage("로딩중");
+            dialog.show();
         }
 
         @Override
@@ -227,6 +235,10 @@ public class MainActivity extends AppCompatActivity {
                     adapter.notifyDataSetChanged();
                     count++;
                 }
+
+                // (로딩창 띄우기 작업 3/3)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
             }
 
             catch (Exception e) {

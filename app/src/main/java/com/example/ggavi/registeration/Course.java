@@ -4,7 +4,7 @@ public class Course {
 
     int courseID;               // 고유 번호
     String courseUniversity;    // 학부 혹은 대학원
-    String courseYear;             // 해당 년도
+    String courseYear;          // 해당 년도
     String courseTerm;          // 해당 학기
     String courseArea;          // 강의 영역
     String courseMajor;         // 해당 학과

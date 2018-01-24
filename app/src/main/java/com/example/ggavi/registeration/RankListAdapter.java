@@ -62,23 +62,25 @@ public class RankListAdapter extends BaseAdapter {
 
         // rank.xml이라는 레이아웃에 있는 모든 원소가 하나의 변수로써 자리잡게 되었다.
         TextView rankTextView = (TextView) v.findViewById(R.id.rankTextView);
-        TextView courseGrade = (TextView) v.findViewById(R.id.courseGrade);
+        //TextView courseGrade = (TextView) v.findViewById(R.id.courseGrade);
         TextView courseTitle = (TextView) v.findViewById(R.id.courseTitle);
-        TextView courseCredit = (TextView) v.findViewById(R.id.courseCredit);
-        TextView courseDivide = (TextView) v.findViewById(R.id.courseDivide);
-        TextView coursePersonnel = (TextView) v.findViewById(R.id.coursePersonnel);
-        TextView courseProfessor = (TextView) v.findViewById(R.id.courseProfessor);
-        TextView courseTime = (TextView) v.findViewById(R.id.courseTime);
+        //TextView courseCredit = (TextView) v.findViewById(R.id.courseCredit);
+        //TextView courseDivide = (TextView) v.findViewById(R.id.courseDivide);
+        //TextView coursePersonnel = (TextView) v.findViewById(R.id.coursePersonnel);
+        //TextView courseProfessor = (TextView) v.findViewById(R.id.courseProfessor);
+        //TextView courseTime = (TextView) v.findViewById(R.id.courseTime);
 
         rankTextView.setText((i+1) + "위");   // 몇 등인지 보여줌
 
         // 1위가 아닐 경우 모두 같은 배경색
         if(i != 0)
         {
-            rankTextView.setBackgroundColor(parent.getResources().getColor(R.color.colorPrimary));
+            rankTextView.setBackgroundColor(parent.getResources().getColor(R.color.colorPrimaryDark));
         }
 
+        courseTitle.setText(courseList.get(i).getCourseTitle());
 
+/*
         // courseList에서 특정한 원소를 가져올때
         // 그 원소가 "제한 없음"이라는 값을 가지거나
         // 혹은 Grade 값이 현재 비어있는 경우 "모든 학년"이라고 보여진다.
@@ -92,7 +94,6 @@ public class RankListAdapter extends BaseAdapter {
             courseGrade.setText(courseList.get(i).getCourseGrade() + "학년");
         }
 
-        courseTitle.setText(courseList.get(i).getCourseTitle());
         courseCredit.setText(courseList.get(i).getCourseCredit() + "학점");
         courseDivide.setText(courseList.get(i).getCourseDivide() + "분반");
 
@@ -125,6 +126,9 @@ public class RankListAdapter extends BaseAdapter {
 
         // 이렇게 하면 정상적으로 모든 값이 출력되서 디자인에 들어감
         courseTime.setText(courseList.get(i).getCourseTime() + "");
+
+        */
+
         v.setTag(courseList.get(i).getCourseID());
         return v;
     }
