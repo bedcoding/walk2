@@ -213,11 +213,6 @@ public class CourseFragment extends Fragment {
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-
-
-
-
-
                 //
                 if(termSpinner.getSelectedItem().equals("강북구"))
                 {
@@ -258,6 +253,84 @@ public class CourseFragment extends Fragment {
                 if(termSpinner.getSelectedItem().equals("노원구"))
                 {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_노원구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("도봉구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_도봉구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("동대문구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_동대문구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("동작구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_동작구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("마포구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_마포구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("서대문구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_서대문구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("서초구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_서초구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("성북구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_성북구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("송파구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_송파구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("용산구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_용산구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("은평구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_은평구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("종로구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_종로구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("중구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_중구, android.R.layout.simple_spinner_dropdown_item);
+                    areaSpinner.setAdapter(areaAdapter);
+                }
+
+                if(termSpinner.getSelectedItem().equals("중랑구"))
+                {
+                    areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_중랑구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
             }
