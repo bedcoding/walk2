@@ -1,5 +1,6 @@
 package com.example.ggavi.registeration;
 
+import android.app.ProgressDialog;
 import android.content.pm.ActivityInfo;
 import android.os.AsyncTask;
 import android.support.v4.app.FragmentManager;

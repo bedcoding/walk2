@@ -51,12 +51,11 @@
     <string-array name="road_seoul_강남구">
         <item>서울도보관광코스</item>
         <item>서울둘레길</item>
-        <item>38선숨길</item>
     </string-array>
 
     <string-array name="road_seoul_강동구">
         <item>서울둘레길</item>
-        <item>강동그린웨이 걷기대회 코스</item>
+        <item>강동그린웨이걷기대회코스</item>
     </string-array>
 
     <string-array name="road_seoul_강북구">

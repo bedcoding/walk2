@@ -1,6 +1,7 @@
 package com.example.ggavi.registeration;
 
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -84,8 +85,6 @@ public class CourseFragment extends Fragment {
     private Spinner majorSpinner;
 
 
-
-
     // (11)파싱을 위해 추가로 선언한 변수
     private ListView courseListView;
     private CourseListAdapter adapter;
@@ -114,11 +113,10 @@ public class CourseFragment extends Fragment {
                 courseUniversity = courseButton.getText().toString();
 
 
-
                 // 무엇을 선택했냐에 따라 다르게 나오도록 한다
                 // 예: 걷는길을 선택하면 걷는길 목록이, 자전거길을 선택하면 자전거길 목록이 나오는 식
                 // 만약 걷는길을 선택하면 바로 arrays.xml 파일에서 적절한 값을 가져와서 체크박스에 넣어준다.
-                if(courseUniversity.equals("걷는길")) {
+                if (courseUniversity.equals("걷는길")) {
                     // 2018 / 서울특별시
                     yearAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.year, android.R.layout.simple_spinner_dropdown_item);
                     yearSpinner.setAdapter(yearAdapter);
@@ -138,9 +136,7 @@ public class CourseFragment extends Fragment {
                     // 4번째 버튼 (필요 없지만 남겨둠)
                     majorAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.final_road, android.R.layout.simple_spinner_dropdown_item);
                     majorSpinner.setAdapter(majorAdapter);
-                }
-
-                else if(courseUniversity.equals("자전거길")) {
+                } else if (courseUniversity.equals("자전거길")) {
 
                     // 2018 / 서울특별시
                     yearAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.year, android.R.layout.simple_spinner_dropdown_item);
@@ -168,14 +164,12 @@ public class CourseFragment extends Fragment {
         });
 
 
-
         // 첫번째 버튼: '걷는길' 및 '자전거길'을 선택했을 때
         yearSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if(yearSpinner.getSelectedItem().equals("서울특별시"))
-                {
+                if (yearSpinner.getSelectedItem().equals("서울특별시")) {
                     termAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.city_seoul, android.R.layout.simple_spinner_dropdown_item);
                     termSpinner.setAdapter(termAdapter);
                 }
@@ -196,140 +190,117 @@ public class CourseFragment extends Fragment {
         });
 
 
-
         // 두번째 버튼: 만약 위에서 '서울특별시'를 선택했을 경우!
         termSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(termSpinner.getSelectedItem().equals("강남구"))
-                {
+                if (termSpinner.getSelectedItem().equals("강남구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_강남구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("강동구"))
-                {
+                if (termSpinner.getSelectedItem().equals("강동구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_강동구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
                 //
-                if(termSpinner.getSelectedItem().equals("강북구"))
-                {
+                if (termSpinner.getSelectedItem().equals("강북구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_강북구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("강서구"))
-                {
+                if (termSpinner.getSelectedItem().equals("강서구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_강서구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("관악구"))
-                {
+                if (termSpinner.getSelectedItem().equals("관악구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_관악구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("광진구"))
-                {
+                if (termSpinner.getSelectedItem().equals("광진구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_광진구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("구로구"))
-                {
+                if (termSpinner.getSelectedItem().equals("구로구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_구로구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("금천구"))
-                {
+                if (termSpinner.getSelectedItem().equals("금천구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_금천구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("노원구"))
-                {
+                if (termSpinner.getSelectedItem().equals("노원구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_노원구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("도봉구"))
-                {
+                if (termSpinner.getSelectedItem().equals("도봉구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_도봉구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("동대문구"))
-                {
+                if (termSpinner.getSelectedItem().equals("동대문구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_동대문구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("동작구"))
-                {
+                if (termSpinner.getSelectedItem().equals("동작구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_동작구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("마포구"))
-                {
+                if (termSpinner.getSelectedItem().equals("마포구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_마포구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("서대문구"))
-                {
+                if (termSpinner.getSelectedItem().equals("서대문구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_서대문구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("서초구"))
-                {
+                if (termSpinner.getSelectedItem().equals("서초구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_서초구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("성북구"))
-                {
+                if (termSpinner.getSelectedItem().equals("성북구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_성북구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("송파구"))
-                {
+                if (termSpinner.getSelectedItem().equals("송파구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_송파구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("용산구"))
-                {
+                if (termSpinner.getSelectedItem().equals("용산구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_용산구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("은평구"))
-                {
+                if (termSpinner.getSelectedItem().equals("은평구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_은평구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("종로구"))
-                {
+                if (termSpinner.getSelectedItem().equals("종로구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_종로구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("중구"))
-                {
+                if (termSpinner.getSelectedItem().equals("중구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_중구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
 
-                if(termSpinner.getSelectedItem().equals("중랑구"))
-                {
+                if (termSpinner.getSelectedItem().equals("중랑구")) {
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.road_seoul_중랑구, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);
                 }
@@ -340,7 +311,6 @@ public class CourseFragment extends Fragment {
 
             }
         });
-
 
 
         // 초기화 (해당 리스트 뷰와 일치시킴)
@@ -400,13 +370,17 @@ public class CourseFragment extends Fragment {
     // 카페24 Course DB연결 (MainActivity에서 공지사항 DB연결 부분 복붙)
     class BackgroundTask extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 4/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(getActivity());
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
         protected void onPreExecute() {
+            // (로딩창 띄우기 작업 4/2) 보통 여기에 다이얼로그를 보여주게 한다.
+            // onPreExecute는 스레드를 연결하기 전에 UI를 처리해주는 메소드이기 때문
 
-            try
-            {
+            try {
                 // 주소에 courseUniversity라는 매개변수를 보냄 (courseUniversity라는 변수를 UTF-8으로 치환
                 // 예) courseYear에서는 현재 리스트에서 yearSpinner에 있는 정보를 UTF-8으로 치환해서 보냄
 
@@ -415,10 +389,12 @@ public class CourseFragment extends Fragment {
                         "&courseTerm=" + URLEncoder.encode(termSpinner.getSelectedItem().toString(), "UTF-8") +
                         "&courseArea=" + URLEncoder.encode(areaSpinner.getSelectedItem().toString(), "UTF-8") +
                         "&courseMajor=" + URLEncoder.encode(majorSpinner.getSelectedItem().toString(), "UTF-8");
-            }
 
-            catch (Exception e)
-            {
+                // (로딩창 띄우기 작업 4/3)
+                dialog.setMessage("로딩중");
+                dialog.show();
+
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
@@ -441,8 +417,7 @@ public class CourseFragment extends Fragment {
                 StringBuilder stringBuilder = new StringBuilder();
 
                 // null 값이 아닐 때까지 계속 반복해서 읽어온다.
-                while ((temp=bufferedReader.readLine()) != null)
-                {
+                while ((temp = bufferedReader.readLine()) != null) {
                     // temp에 한줄씩 추가하면서 넣어줌
                     stringBuilder.append(temp + "\n");
                 }
@@ -452,9 +427,7 @@ public class CourseFragment extends Fragment {
                 inputStream.close();
                 httpURLConnection.disconnect();  //인터넷도 끊어줌
                 return stringBuilder.toString().trim();
-            }
-
-            catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
             return null;
@@ -464,7 +437,6 @@ public class CourseFragment extends Fragment {
         public void onProgressUpdate(Void... values) {
             super.onProgressUpdate();
         }
-
 
 
         @Override
@@ -499,8 +471,7 @@ public class CourseFragment extends Fragment {
 
 
                 // 이제 모든 배열의 원소를 전부 돌면서 어떠한 동작을 처리하게 한다.
-                while(count < jsonArray.length())
-                {
+                while (count < jsonArray.length()) {
                     // 현재 배열의 원소값을 가져올 수 있도록 한다.
                     JSONObject object = jsonArray.getJSONObject(count);
 
@@ -529,9 +500,12 @@ public class CourseFragment extends Fragment {
                     count++;
                 }
 
+                // (로딩창 띄우기 작업 4/4)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
+
                 // 만약 count가 0이라면 (즉 어떠한 강의도 조회되지 않았다면)
-                if(count == 0)
-                {
+                if (count == 0) {
                     AlertDialog dialog;
 
                     // 현재의 CourseFragment라는 액티비티에 메시지가 나오게 된다.
@@ -546,9 +520,7 @@ public class CourseFragment extends Fragment {
 
                 // 값이 변경되었음을 알린다.
                 adapter.notifyDataSetChanged();
-            }
-
-            catch (Exception e) {
+            } catch (Exception e) {
                 e.printStackTrace();
             }
         }
