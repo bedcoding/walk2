@@ -20,10 +20,15 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="당신이 좋아하는 코스: "
+            android:text="당신이 좋아하는 코스"
             android:textColor="#000000" />
 
+
+        <!-- 지금은 필요없어서 숨겼다 -->
+        <!-- 내가 몇개의 코스를 신청했는지 보여주는 부분 -->
+        <!-- 그러나 현재 1개 밖에 신청할 수 없도록 해놔서 필요없다 -->
         <TextView
+            android:visibility="gone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="0개"
