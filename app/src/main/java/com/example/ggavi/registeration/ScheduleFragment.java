@@ -62,6 +62,7 @@ public class ScheduleFragment extends Fragment {
 
     // (15) 0교시 ~ 14교시
     // (16) TextView를 깃허브에서 긁어온 자동 글자크기 조절 함수로 변경
+    // 지우고 싶은데 지우면 에러가 뜬다.
     private AutoResizeTextView monday[] = new AutoResizeTextView[14];
     private AutoResizeTextView tuesday[] = new AutoResizeTextView[14];
     private AutoResizeTextView wednesday[] = new AutoResizeTextView[14];
@@ -77,6 +78,7 @@ public class ScheduleFragment extends Fragment {
     public void onActivityCreated(Bundle b) {
         super.onActivityCreated(b);
         monday[0] = (AutoResizeTextView) getView().findViewById(R.id.monday0);
+/*
         monday[1] = (AutoResizeTextView) getView().findViewById(R.id.monday1);
         monday[2] = (AutoResizeTextView) getView().findViewById(R.id.monday2);
         monday[3] = (AutoResizeTextView) getView().findViewById(R.id.monday3);
@@ -90,7 +92,9 @@ public class ScheduleFragment extends Fragment {
         monday[11] = (AutoResizeTextView) getView().findViewById(R.id.monday11);
         monday[12] = (AutoResizeTextView) getView().findViewById(R.id.monday12);
         monday[13] = (AutoResizeTextView) getView().findViewById(R.id.monday13);
+*/
 
+/*
         tuesday[0] = (AutoResizeTextView) getView().findViewById(R.id.tuesday0);
         tuesday[1] = (AutoResizeTextView) getView().findViewById(R.id.tuesday1);
         tuesday[2] = (AutoResizeTextView) getView().findViewById(R.id.tuesday2);
@@ -150,6 +154,7 @@ public class ScheduleFragment extends Fragment {
         friday[11] = (AutoResizeTextView) getView().findViewById(R.id.friday11);
         friday[12] = (AutoResizeTextView) getView().findViewById(R.id.friday12);
         friday[13] = (AutoResizeTextView) getView().findViewById(R.id.friday13);
+*/
 
         // (15) BackgroundTask 실행
         new BackgroundTask().execute();
@@ -272,6 +277,7 @@ public class ScheduleFragment extends Fragment {
 
             // 스케쥴에서 세팅 (모든 강의가 추가된 이후 세팅이 마쳐져서 텍스트 뷰에 출력이 되는 것)
             schedule.setting(monday, tuesday, wednesday, thursday, friday, getContext());
+            //schedule.setting(monday, getContext()); 하나만 남기고 필요없는건 지우고 싶은데 안되더라
         }
     }
 

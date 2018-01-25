@@ -117,18 +117,18 @@ public class CourseFragment extends Fragment {
                 // 예: 걷는길을 선택하면 걷는길 목록이, 자전거길을 선택하면 자전거길 목록이 나오는 식
                 // 만약 걷는길을 선택하면 바로 arrays.xml 파일에서 적절한 값을 가져와서 체크박스에 넣어준다.
                 if (courseUniversity.equals("걷는길")) {
-                    // 2018 / 서울특별시
+                    // 1번째 버튼
                     yearAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.year, android.R.layout.simple_spinner_dropdown_item);
                     yearSpinner.setAdapter(yearAdapter);
 
                     /*
-                    // 1학기
+                    // 2번째 버튼
                     termAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.term, android.R.layout.simple_spinner_dropdown_item);
                     termSpinner.setAdapter(termAdapter);
                     */
 
                     /*
-                    // 교양및기타
+                    // 3번째 버튼
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.universityArea, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);  //areaAdapter를 자신의 어댑터로 설정
                     */
@@ -138,18 +138,18 @@ public class CourseFragment extends Fragment {
                     majorSpinner.setAdapter(majorAdapter);
                 } else if (courseUniversity.equals("자전거길")) {
 
-                    // 2018 / 서울특별시
+                    // 1번째 버튼
                     yearAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.year, android.R.layout.simple_spinner_dropdown_item);
                     yearSpinner.setAdapter(yearAdapter);
 
                     /*
-                    // 1학기
+                    // 2번째 버튼
                     termAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.term, android.R.layout.simple_spinner_dropdown_item);
                     termSpinner.setAdapter(termAdapter);
                     */
 
                     /*
-                    // 일반대학원
+                    // 3번째 버튼
                     areaAdapter = ArrayAdapter.createFromResource(getActivity(), R.array.graduateArea, android.R.layout.simple_spinner_dropdown_item);
                     areaSpinner.setAdapter(areaAdapter);  //areaAdapter를 자신의 어댑터로 설정
                     */
