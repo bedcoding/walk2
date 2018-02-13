@@ -1,5 +1,6 @@
 package com.example.ggavi.registeration;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -61,6 +62,7 @@ public class ScheduleFragment extends Fragment {
 
     // (15) 0교시 ~ 14교시
     // (16) TextView를 깃허브에서 긁어온 자동 글자크기 조절 함수로 변경
+    // 지우고 싶은데 지우면 에러가 뜬다.
     private AutoResizeTextView monday[] = new AutoResizeTextView[14];
     private AutoResizeTextView tuesday[] = new AutoResizeTextView[14];
     private AutoResizeTextView wednesday[] = new AutoResizeTextView[14];
@@ -76,6 +78,7 @@ public class ScheduleFragment extends Fragment {
     public void onActivityCreated(Bundle b) {
         super.onActivityCreated(b);
         monday[0] = (AutoResizeTextView) getView().findViewById(R.id.monday0);
+/*
         monday[1] = (AutoResizeTextView) getView().findViewById(R.id.monday1);
         monday[2] = (AutoResizeTextView) getView().findViewById(R.id.monday2);
         monday[3] = (AutoResizeTextView) getView().findViewById(R.id.monday3);
@@ -89,7 +92,9 @@ public class ScheduleFragment extends Fragment {
         monday[11] = (AutoResizeTextView) getView().findViewById(R.id.monday11);
         monday[12] = (AutoResizeTextView) getView().findViewById(R.id.monday12);
         monday[13] = (AutoResizeTextView) getView().findViewById(R.id.monday13);
+*/
 
+/*
         tuesday[0] = (AutoResizeTextView) getView().findViewById(R.id.tuesday0);
         tuesday[1] = (AutoResizeTextView) getView().findViewById(R.id.tuesday1);
         tuesday[2] = (AutoResizeTextView) getView().findViewById(R.id.tuesday2);
@@ -149,6 +154,7 @@ public class ScheduleFragment extends Fragment {
         friday[11] = (AutoResizeTextView) getView().findViewById(R.id.friday11);
         friday[12] = (AutoResizeTextView) getView().findViewById(R.id.friday12);
         friday[13] = (AutoResizeTextView) getView().findViewById(R.id.friday13);
+*/
 
         // (15) BackgroundTask 실행
         new BackgroundTask().execute();
@@ -158,14 +164,24 @@ public class ScheduleFragment extends Fragment {
     //  데이터베이스에 접속할 수 있도록 만든 함수
     class BackgroundTask extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 4/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(getActivity());
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
         protected void onPreExecute() {
+            // (로딩창 띄우기 작업 4/2) 보통 여기에 다이얼로그를 보여주게 한다.
+            // onPreExecute는 스레드를 연결하기 전에 UI를 처리해주는 메소드.
+
             // 스케쥴 리스트를 검사할 수 있도록 userID를 넣어줌
             try
             {   // MainActivity에 있는 유저 아이디를 가져옴
                 target = "http://ggavi2000.cafe24.com/ScheduleList.php?userID=" + URLEncoder.encode(MainActivity. userID, "UTF-8");  //해당 웹 서버에 접속
+
+                // (로딩창 띄우기 작업 4/3)
+                dialog.setMessage("로딩중");
+                dialog.show();
             }
 
             catch (Exception e)
@@ -238,7 +254,7 @@ public class ScheduleFragment extends Fragment {
                     // 현재 배열의 원소값을 저장
                     JSONObject object = jsonArray.getJSONObject(count);
 
-                    // 공지사항의 Content, Name, Date에 해당하는 값을 가져와라는 뜻
+                    // Course DB의 값을 가져오라는 뜻
                     courseID = object.getInt("courseID");
                     courseProfessor = object.getString("courseProfessor");
                     courseTime = object.getString("courseTime");
@@ -250,12 +266,18 @@ public class ScheduleFragment extends Fragment {
                     schedule.addSchedule(courseTime, courseTitle, courseProfessor);
                     count++;
                 }
+
+                // (로딩창 띄우기 작업 4/4)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
+
             } catch (Exception e) {
                 e.printStackTrace();
             }
 
             // 스케쥴에서 세팅 (모든 강의가 추가된 이후 세팅이 마쳐져서 텍스트 뷰에 출력이 되는 것)
             schedule.setting(monday, tuesday, wednesday, thursday, friday, getContext());
+            //schedule.setting(monday, getContext()); 하나만 남기고 필요없는건 지우고 싶은데 안되더라
         }
     }
 

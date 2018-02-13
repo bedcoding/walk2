@@ -1,5 +1,6 @@
 package com.example.ggavi.registeration;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.AsyncTask;
@@ -166,14 +167,24 @@ public class StatisticsFragment extends Fragment {
     // (22)여자 중에서 순위 불러오기
     class ByFemale extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 4/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(getActivity());
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
         protected void onPreExecute() {
+            // (로딩창 띄우기 작업 4/2) 보통 여기에 다이얼로그를 보여주게 한다.
+            // onPreExecute는 스레드를 연결하기 전에 UI를 처리해주는 메소드이기 때문
+
             // 스케쥴 리스트를 검사할 수 있도록 userID를 넣어줌
             try
             {
                 target = "http://ggavi2000.cafe24.com/ByFemale.php";  //해당 웹 서버에 접속
+
+                // (로딩창 띄우기 작업 4/3)
+                dialog.setMessage("로딩중");
+                dialog.show();
             }
 
             catch (Exception e)
@@ -267,6 +278,10 @@ public class StatisticsFragment extends Fragment {
                     rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseTime, courseProfessor));  // Course.java에서 추가한 생성자 부분을 그대로 넣어준다
                     count++;
                 }
+
+                // (로딩창 띄우기 작업 4/4)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
 
                 // 어댑터를 새롭게 갱신
                 rankListAdapter.notifyDataSetChanged();
@@ -281,6 +296,9 @@ public class StatisticsFragment extends Fragment {
     // (22)남자 중에서 순위 불러오기
     class ByMale extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 3/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(getActivity());
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
@@ -289,6 +307,10 @@ public class StatisticsFragment extends Fragment {
             try
             {
                 target = "http://ggavi2000.cafe24.com/ByMale.php";  //해당 웹 서버에 접속
+
+                // (로딩창 띄우기 작업 3/2)
+                dialog.setMessage("로딩중");
+                dialog.show();
             }
 
             catch (Exception e)
@@ -382,6 +404,10 @@ public class StatisticsFragment extends Fragment {
                     rankList.add(new Course(courseID, courseGrade, courseTitle, courseCredit, courseDivide, coursePersonnel, courseTime, courseProfessor));  // Course.java에서 추가한 생성자 부분을 그대로 넣어준다
                     count++;
                 }
+
+                // (로딩창 띄우기 작업 3/3)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
 
                 // 어댑터를 새롭게 갱신
                 rankListAdapter.notifyDataSetChanged();
@@ -396,6 +422,9 @@ public class StatisticsFragment extends Fragment {
     // (21)전체에서 순위 불러오기
     class ByEntire extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 4/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(getActivity());
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
@@ -404,6 +433,10 @@ public class StatisticsFragment extends Fragment {
             try
             {
                 target = "http://ggavi2000.cafe24.com/ByEntire.php";  //해당 웹 서버에 접속
+
+                // (로딩창 띄우기 작업 3/2)
+                dialog.setMessage("로딩중");
+                dialog.show();
             }
 
             catch (Exception e)
@@ -498,6 +531,10 @@ public class StatisticsFragment extends Fragment {
                     count++;
                 }
 
+                // (로딩창 띄우기 작업 3/3)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
+
                 // 어댑터를 새롭게 갱신
                 rankListAdapter.notifyDataSetChanged();
 
@@ -511,14 +548,21 @@ public class StatisticsFragment extends Fragment {
     //  데이터베이스에 접속할 수 있도록 만든 함수
     class BackgroundTask extends AsyncTask<Void, Void, String>
     {
+        // (로딩창 띄우기 작업 3/1) 로딩창을 띄우기 위해 선언해준다.
+        ProgressDialog dialog = new ProgressDialog(getActivity());
+
         String target;  //우리가 접속할 홈페이지 주소가 들어감
 
         @Override
         protected void onPreExecute() {
-            // 스케쥴 리스트를 검사할 수 있도록 userID를 넣어줌
+
             try
             {   // MainActivity에 있는 유저 아이디를 가져옴
                 target = "http://ggavi2000.cafe24.com/StatisticsCourseList.php?userID=" + URLEncoder.encode(MainActivity.userID, "UTF-8");  //해당 웹 서버에 접속
+
+                // (로딩창 띄우기 작업 3/2)
+                dialog.setMessage("로딩중");
+                dialog.show();
             }
 
             catch (Exception e)
@@ -609,9 +653,13 @@ public class StatisticsFragment extends Fragment {
                     count++;
                 }
 
+                // (로딩창 띄우기 작업 3/3)
+                // 작업이 끝나면 로딩창을 종료시킨다.
+                dialog.dismiss();
+
                 // 어댑터를 새롭게 갱신
                 adapter.notifyDataSetChanged();
-                credit.setText(totalCredit + "학점");     // 전체 학점 출력
+                credit.setText(totalCredit + "개");     // 전체 학점 출력
 
             } catch (Exception e) {
                 e.printStackTrace();

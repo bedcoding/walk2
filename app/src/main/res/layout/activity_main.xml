@@ -21,7 +21,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/courseButton"
-        android:text="목록"
+        android:text="길 목록"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/scheduleButton"
-        android:text="시간표"
+        android:text="좋아하는 길"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:id="@+id/statisticsButton"
-        android:text="분석"
+        android:text="인기순"
         android:textStyle="bold"
         android:textColor="#FFFFFF"
         android:textSize="18dp"
@@ -79,12 +79,12 @@
             android:background="@color/colorPrimary"
             android:layout_marginTop="8dp">
 
-            <ImageButton
+            <ImageView
                 android:layout_width="165dp"
                 android:layout_height="125dp"
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
-                android:src="@drawable/logo2"/>
+                android:src="@drawable/logo"/>
 
             <TextView
                 android:layout_width="wrap_content"
@@ -103,7 +103,7 @@
             android:id="@+id/noticeListView"
             android:layout_margin="10dp"
             android:dividerHeight="10dp"
-            android:divider="#ffffff">
+            android:divider="@color/colorBackground">
         </ListView>
 
     </LinearLayout>

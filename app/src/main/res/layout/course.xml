@@ -11,7 +11,7 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="추가"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:textColor="#ffffff"
         android:textSize="18dp"
         android:id="@+id/addButton"
@@ -20,15 +20,16 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="horizontal"
             android:background="@color/colorPrimary">
 
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -37,18 +38,20 @@
                 android:layout_gravity="center"
                 android:padding="3dp"
                 android:textColor="#ffffff" />
+-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="강의제목"
+                android:text="코스 이름"
                 android:id="@+id/courseTitle"
                 android:layout_gravity="center"
-                android:padding="3dp"
+                android:padding="10dp"
                 android:textColor="#ffffff"
                 android:textStyle="bold" />
         </LinearLayout>
 
+<!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,7 +86,8 @@
                 android:padding="3dp"
                 android:textColor="#000000" />
         </LinearLayout>
-
+-->
+<!--
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -99,6 +103,7 @@
                 android:padding="3dp"
                 android:textColor="#f92a3f" />
 
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -108,6 +113,7 @@
                 android:padding="3dp"
                 android:textColor="@color/colorPrimaryDark" />
         </LinearLayout>
+-->
 
     </LinearLayout>
     

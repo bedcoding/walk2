@@ -2,20 +2,21 @@
 
 <!--공지사항에 들어갈 녀석-->
 <LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
     android:orientation="vertical"
     android:layout_height="match_parent">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="공지사항"
+        android:text=" 공지사항"
         android:layout_gravity="center"
         android:padding="10dp"
         android:textColor="#ffffff"
         android:id="@+id/noticeText"
-        android:drawableStart="@drawable/ic_textsms_black_24dp"
-        android:drawableLeft="@drawable/ic_textsms_black_24dp"
+        android:drawableStart="@drawable/ic_create_black_24dp"
+        android:drawableLeft="@drawable/ic_create_black_24dp"
         android:background="@color/colorPrimary"
         android:textStyle="bold"/>
 

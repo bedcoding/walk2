@@ -34,7 +34,7 @@ public class CourseListAdapter extends BaseAdapter {
     private List<Course> courseList;      // Course가 들어가는 리스트를 만들어줌
     private Fragment parent;              // 12강 추가
 
-    // 해당 서버 프로그램을 이용해서 시간표가 중복되는지 체크 (13강)
+    // (13) 해당 서버 프로그램을 이용해서 시간표가 중복되는지 체크
     private String userID = MainActivity.userID;  // MainActivity에 있는 public 형태의 userID를 가져와서 해당 사용자의 아이디를 저장
     private Schedule schedule = new Schedule();
     private List<Integer> courseIDList;           // courseID가 중복되는지 검사하기 위해 courseID가 들어가는 리스트
@@ -82,18 +82,21 @@ public class CourseListAdapter extends BaseAdapter {
 
 
         // course라는 레이아웃에 있는 모든 원소가 하나의 변수로써 자리잡게 되었다.
-        TextView courseGrade = (TextView) v.findViewById(R.id.courseGrade);
+        //TextView courseGrade = (TextView) v.findViewById(R.id.courseGrade);
         TextView courseTitle = (TextView) v.findViewById(R.id.courseTitle);
-        TextView courseCredit = (TextView) v.findViewById(R.id.courseCredit);
-        TextView courseDivide = (TextView) v.findViewById(R.id.courseDivide);
-        TextView coursePersonnel = (TextView) v.findViewById(R.id.coursePersonnel);
-        TextView courseProfessor = (TextView) v.findViewById(R.id.courseProfessor);
-        TextView courseTime = (TextView) v.findViewById(R.id.courseTime);
+        //TextView courseCredit = (TextView) v.findViewById(R.id.courseCredit);
+        //TextView courseDivide = (TextView) v.findViewById(R.id.courseDivide);
+        //TextView coursePersonnel = (TextView) v.findViewById(R.id.coursePersonnel);
+        //TextView courseProfessor = (TextView) v.findViewById(R.id.courseProfessor);
+        //TextView courseTime = (TextView) v.findViewById(R.id.courseTime);
 
 
+        courseTitle.setText(courseList.get(i).getCourseTitle());
         // courseList에서 특정한 원소를 가져왔는데
         // 그 원소가 "제한 없음"이라는 값을 가지거나
         // 혹은 Grade 값이 현재 비어있는 경우 "모든 학년"이라고 보여진다.
+/*
+
         if(courseList.get(i).getCourseGrade().equals("제한 없음") || courseList.get(i).getCourseGrade().equals(""))
         {
             courseGrade.setText("모든 학년");
@@ -104,7 +107,6 @@ public class CourseListAdapter extends BaseAdapter {
             courseGrade.setText(courseList.get(i).getCourseGrade() + "학년");
         }
 
-        courseTitle.setText(courseList.get(i).getCourseTitle());
         courseCredit.setText(courseList.get(i).getCourseCredit() + "학점");
         courseDivide.setText(courseList.get(i).getCourseDivide() + "분반");
 
@@ -133,6 +135,7 @@ public class CourseListAdapter extends BaseAdapter {
 
         courseTime.setText(courseList.get(i).getCourseTime() + "");
 
+*/
 
         // 현재 강의에서 강의 ID값을 태그로 삼을 수 있도록 한다.
         v.setTag(courseList.get(i).getCourseID());
@@ -157,11 +160,13 @@ public class CourseListAdapter extends BaseAdapter {
                 if (!alreadyIn(courseIDList, courseList.get(i).getCourseID())) {
                     // 만약 자기가 신청했던 강의ID 속에서 현재 신청한 강의가 ID에 포함되어 있다면 이미 신청한 강의이므로 신청할 수 없도록 한다.
                     AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());  //자신을 불러낸 CourseFragment에서 알림창을 띄워줌
-                    AlertDialog dialog = builder.setMessage("이미 추가한 강의입니다.")
+                    AlertDialog dialog = builder.setMessage("이미 추가한 코스입니다.")
                             .setPositiveButton("다시 시도", null)
                             .create();  //create 이걸로 다이얼로그에 다시 넣어줌
                     dialog.show();
                 }
+
+                /*
 
                 else if (totalCredit + courseList.get(i).getCourseCredit() > 100)
                 {
@@ -172,12 +177,14 @@ public class CourseListAdapter extends BaseAdapter {
                     dialog.show();
                 }
 
-                // 즉 시간표가 중복되었다면
+                */
+
+                // 즉 중복되었다면
                 else if (validate == false) {
                     // 월요일[1]인 과목1과 월요일[1]인 과목2를 동시에 신청 못하게 막음
                     // 만약 자기가 신청했던 강의ID 속에서 현재 신청한 강의가 ID에 포함되어 있다면 이미 신청한 강의이므로 신청할 수 없도록 한다.
                     AlertDialog.Builder builder = new AlertDialog.Builder(parent.getActivity());  //자신을 불러낸 CourseFragment에서 알림창을 띄워줌
-                    AlertDialog dialog = builder.setMessage("시간표가 중복됩니다.")
+                    AlertDialog dialog = builder.setMessage("이미 다른 코스를 넣으셨습니다")
                             .setPositiveButton("다시 시도", null)
                             .create();  //create 이걸로 다이얼로그에 다시 넣어줌
                     dialog.show();

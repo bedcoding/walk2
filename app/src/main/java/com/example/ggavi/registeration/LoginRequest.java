@@ -1,6 +1,6 @@
 package com.example.ggavi.registeration;
 
-// 로그인 관련 서버세팅을 끝낸 뒤 만듬
+// (5) 로그인 관련 서버세팅을 끝낸 뒤 만듬
 // 해당 서버에 직접 로그인 요청을 보내는 클래스
 
 import com.android.volley.Response;

@@ -25,71 +25,83 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="학부"
+            android:text="걷는길"
             android:id="@+id/university"/>
 
         <RadioButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="대학원"
+            android:text="자전거길"
             android:id="@+id/graduate"/>
     </RadioGroup>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:paddingRight="10dp">
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp">
 
         <Spinner
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:id="@+id/yearSpinner"> <!--연도가 들어가는 스피너-->
+            android:id="@+id/yearSpinner">
         </Spinner>
 
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
         <Spinner
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
-            android:id="@+id/termSpinner"> <!--학기가 들어가는 스피너-->
+            android:id="@+id/termSpinner">
         </Spinner>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation = "horizontal">
 
         <Spinner
-            android:layout_width="120dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:id="@+id/areaSpinner">
         </Spinner>
-        
-    </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:paddingRight="10dp">
+        <!-- 4번째 버튼은 현재 필요없으므로 "gone"을 해서 안보이게 숨겼습니다
+             나중에 기능 확장하게 되어 4번째 데이터가 필요하게 될 경우에만
+             DB에서 4번째 데이터를 활용하시고 이 버튼을 다시 활성화 시키십시오.
+             현재 php와 DB와 연동되어 있어서 삭제하면 에러가 납니다
+
+             참고: 지금은 "선택"이라는 임시 값이 DB로 전송됩니다 -->
 
         <Spinner
-            android:layout_width="230dp"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginLeft="10dp"
             android:id="@+id/majorSpinner">
         </Spinner>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
         <Button
-            android:layout_width="80dp"
+            android:layout_width="364dp"
             android:layout_height="40dp"
             android:textStyle="bold"
             android:textColor="#ffffff"

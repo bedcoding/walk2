@@ -7,11 +7,11 @@
 
     <Button
         android:layout_width="60dp"
-        android:layout_height="30dp"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:gravity="center"
         android:text="삭제"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         android:textColor="#ffffff"
         android:textSize="18dp"
         android:id="@+id/deleteButton"
@@ -29,6 +29,7 @@
             android:orientation="horizontal"
             android:background="@color/colorPrimary">
 
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -38,18 +39,19 @@
                 android:padding="3dp"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"/>
+-->
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="강의 제목"
+                android:text="코스 이름"
                 android:id="@+id/courseTitle"
                 android:layout_gravity="center"
-                android:padding="3dp"
+                android:padding="5dp"
                 android:textColor="#ffffff"
                 android:textColorHint="#ffffff"
                 android:textStyle="bold"/>
-
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -58,6 +60,7 @@
                 android:layout_gravity="center"
                 android:padding="3dp"
                 android:textColor="#ffffff"/>
+-->
         </LinearLayout>
 
         <LinearLayout
@@ -69,13 +72,13 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="신청인원: 40/30"
+                android:text="함께 좋아하는 사람수: 1"
                 android:id="@+id/coursePersonnel"
                 android:layout_gravity="center"
-                android:padding="2dp"
-                android:textColor="#000000"
-                android:textColorHint="#ffffff"/>
+                android:padding="5dp"
+                android:textColor="@color/colorPrimary" />
 
+<!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,7 +88,7 @@
                 android:padding="2dp"
                 android:textColor="@color/colorPrimaryDark"
                 android:textColorHint="@color/colorPrimaryDark"/>
-
+-->
         </LinearLayout>
 
 

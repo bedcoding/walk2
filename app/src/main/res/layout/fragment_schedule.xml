@@ -1,7 +1,8 @@
 <!-- Fragment 이놈은 기본적으로 특정한 화면 안에 있는
      세부적인 화면을 만들 때 많이 사용하는 레이아웃이다 -->
 
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,8 +24,6 @@
                 android:text=""
                 android:layout_width="24dp"
                 android:layout_height="wrap_content"
-                android:drawableStart="@drawable/ic_assignment_black_24dp"
-                android:drawableLeft="@drawable/ic_assignment_black_24dp"
                 android:layout_gravity="center"
                 />
 
@@ -32,7 +31,7 @@
             자동으로 글자 크기 조절해주는 깃허브 소스인
             (AutoResizeTextView.java)와 연결해줄 수 있다↓ -->
             <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
+                android:text="내가 가장 좋아하는 길"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="3"
@@ -42,7 +41,7 @@
                 android:textSize="17dp"
                 android:textAlignment="center"
                 />
-
+<!--
             <com.example.ggavi.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="wrap_content"
@@ -89,32 +88,30 @@
                 android:textStyle="bold"
                 android:textSize="17dp"
                 android:textAlignment="center"
-                />
+                />-->
         </TableRow>
 
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
+            android:layout_height="100dp"
+            android:layout_weight="1">
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="8"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
+            <TextView
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="100dp"
                 android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
                 android:textStyle="bold"
-                android:gravity="right"
+                android:gravity="center"
                 android:textSize="15dp"
                 android:paddingRight="2dp"
                 />
 
             <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="100dp"
                 android:layout_weight="3"
                 android:gravity="center"
                 android:textColor="#ffffff"
@@ -123,6 +120,7 @@
                 android:id="@+id/monday0"
                 />
 
+<!--
             <com.example.ggavi.registeration.AutoResizeTextView
                 android:text="화"
                 android:layout_width="wrap_content"
@@ -170,402 +168,10 @@
                 android:background="@drawable/cell_shape"
                 android:id="@+id/friday0"
                 />
+-->
         </TableRow>
 
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="9"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="2dp"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/monday1"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday1"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday1"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday1"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday1"
-                />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="10"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="2dp"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/monday2"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday2"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday2"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday2"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday2"
-                />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="11"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/monday3"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday3"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday3"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday3"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday3"
-                />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="12"
-                android:layout_width="24dp"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="2dp"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/monday4"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday4"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday4"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday4"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday4"
-                />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="24dp"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@color/colorPrimary">
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="1"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:background="@color/colorPrimary"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:gravity="right"
-                android:textSize="15dp"
-                android:paddingRight="2dp"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="월"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/monday5"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday5"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday5"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday5"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday5"
-                />
-        </TableRow>
-
+<!--
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -593,56 +199,9 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday6"
+                android:id="@+id/monday1"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday6"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday6"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday6"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday6"
-                />
         </TableRow>
 
         <TableRow
@@ -672,56 +231,9 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday7"
+                android:id="@+id/monday2"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday7"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday7"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday7"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday7"
-                />
         </TableRow>
 
         <TableRow
@@ -739,7 +251,6 @@
                 android:textStyle="bold"
                 android:gravity="right"
                 android:textSize="15dp"
-                android:paddingRight="2dp"
                 />
 
             <com.example.ggavi.registeration.AutoResizeTextView
@@ -751,56 +262,9 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday8"
+                android:id="@+id/monday3"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday8"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday8"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday8"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday8"
-                />
         </TableRow>
 
         <TableRow
@@ -830,67 +294,20 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday9"
+                android:id="@+id/monday4"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday9"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday9"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday9"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday9"
-                />
         </TableRow>
 
         <TableRow
-            android:layout_width="match_parent"
+            android:layout_width="24dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/colorPrimary">
 
             <com.example.ggavi.registeration.AutoResizeTextView
                 android:text="6"
-                android:layout_width="24dp"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:background="@color/colorPrimary"
                 android:textColor="#ffffff"
@@ -909,56 +326,10 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday10"
+                android:id="@+id/monday5"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday10"
-                />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday10"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday10"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday10"
-                />
         </TableRow>
 
         <TableRow
@@ -988,56 +359,10 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday11"
+                android:id="@+id/monday6"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday11"
-                />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday11"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday11"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday11"
-                />
         </TableRow>
 
         <TableRow
@@ -1067,56 +392,10 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
-                android:id="@+id/monday12"
+                android:id="@+id/monday7"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday12"
-                />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday12"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday12"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday12"
-                />
         </TableRow>
 
         <TableRow
@@ -1146,57 +425,173 @@
                 android:textColor="#ffffff"
                 android:textStyle="bold"
                 android:background="@drawable/cell_shape"
+                android:id="@+id/monday8"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="10"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="15dp"
+                android:paddingRight="2dp"
+                />
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="월"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/cell_shape"
+                android:id="@+id/monday9"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="11"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="15dp"
+                android:paddingRight="2dp"
+                />
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="월"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/cell_shape"
+                android:id="@+id/monday10"
+                />
+
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="12"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="15dp"
+                android:paddingRight="2dp"
+                />
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="월"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/cell_shape"
+                android:id="@+id/monday11"
+                />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="13"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="15dp"
+                android:paddingRight="2dp"
+                />
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="월"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/cell_shape"
+                android:id="@+id/monday12"
+                />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/colorPrimary">
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="14"
+                android:layout_width="24dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:gravity="right"
+                android:textSize="15dp"
+                android:paddingRight="2dp"
+                />
+
+            <com.example.ggavi.registeration.AutoResizeTextView
+                android:text="월"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:textColor="#ffffff"
+                android:textStyle="bold"
+                android:background="@drawable/cell_shape"
                 android:id="@+id/monday13"
                 />
 
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="화"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/tuesday13"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="수"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/wednesday13"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="목"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/thursday13"
-                />
-
-            <com.example.ggavi.registeration.AutoResizeTextView
-                android:text="금"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:textColor="#ffffff"
-                android:textStyle="bold"
-                android:background="@drawable/cell_shape"
-                android:id="@+id/friday13"
-                />
         </TableRow>
+-->
 
     </TableLayout>
 
